@@ -2,15 +2,27 @@
 	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
+	st = status
+	ci = commit
+	br = branch
 	co = checkout
+	df = diff
+	lg = log -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
 [color]
 	diff = auto
 	status = auto
 	branch = auto
 [core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mate -w
+	excludesfile = /Volumes/BookHD/SSD/fox/.gitignore
+	whitespace = trailing-space,cr-at-eol
 	autocrlf = input
+[push]
+	default = matching
+[branch]
+	autosetuprebase = always
 [apply]
 	whitespace = nowarn
 [format]
