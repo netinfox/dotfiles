@@ -1,0 +1,2 @@
+PWD=`pwd`
+export PATH="$PWD/.rbenv/bin:$PWD/.rbenv/shims:$PATH"
